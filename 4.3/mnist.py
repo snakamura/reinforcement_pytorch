@@ -7,7 +7,7 @@ from sklearn.datasets import fetch_openml
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 
-mnist_X, mnist_y = fetch_openml('mnist_784', version=1, data_home=".", return_X_y=True)
+mnist_X, mnist_y = fetch_openml('mnist_784', version=1, data_home=".", return_X_y=True, as_frame=False)
 X = mnist_X.astype(np.float32) / 255
 y = mnist_y.astype(np.int32)
 
